@@ -355,6 +355,8 @@ E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\
 E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Index.cshtml.g.cs
 E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Create.cshtml.g.cs
 E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Edit.cshtml.g.cs
-E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Pages\Shared\_ProductsButtonPartial.cshtml.g.cs
 E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Delete.cshtml.g.cs
 E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Details.cshtml.g.cs
+E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
+E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\Cart.cshtml.g.cs
+E:\OneDrive\Documents\GitHub\Tajaus\c#\core\Eshop-backup\EShop\obj\Debug\net5.0\Razor\Areas\Customer\Views\Order\Checkout.cshtml.g.cs

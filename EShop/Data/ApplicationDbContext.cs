@@ -17,5 +17,7 @@ namespace EShop.Data
         public DbSet<Categories> Categories { get; set; }
         public DbSet<ProductTags> ProductTags { get; set; }
         public DbSet<Products> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }
     }
 }

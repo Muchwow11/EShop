@@ -29,6 +29,6 @@ namespace EShop.Models
         [Required]
         public int ProductTagId { get; set; }
         [ForeignKey("ProductTagId")]
-        public ProductTags ProductTags { get; set; }
+        public virtual ProductTags ProductTags { get; set; }
     }
 }

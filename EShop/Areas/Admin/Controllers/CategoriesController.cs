@@ -1,8 +1,6 @@
 ﻿using EShop.Data;
 using EShop.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,13 +21,13 @@ namespace EShop.Areas.Admin.Controllers
             return View(_db.Categories.ToList());
         }
 
-        
-            //GET Create Action Method
+
+        //GET Create Action Method
         public ActionResult Create()
         {
             return View();
         }
-            //GET Edit Action Methot
+        //GET Edit Action Methot
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -99,7 +97,7 @@ namespace EShop.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Details(Categories categories) 
+        public IActionResult Details(Categories categories)
         {
             return RedirectToAction(nameof(Index));
         }
@@ -111,7 +109,7 @@ namespace EShop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            if (id!=categories.Id)
+            if (id != categories.Id)
             {
                 return NotFound();
             }

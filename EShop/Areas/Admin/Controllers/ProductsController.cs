@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,8 +15,8 @@ namespace EShop.Areas.Admin.Controllers
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _db;
-        private IHostingEnvironment _he;
-        public ProductsController(ApplicationDbContext db,IHostingEnvironment he)
+        private readonly IHostingEnvironment _he;
+        public ProductsController(ApplicationDbContext db, IHostingEnvironment he)
         {
             _db = db;
             _he = he;
@@ -26,27 +24,27 @@ namespace EShop.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            return View(_db.Products.Include(c=>c.Categories).Include(v=>v.ProductTags).ToList());
+            return View(_db.Products.Include(c => c.Categories).Include(v => v.ProductTags).ToList());
         }
         //GET Create method
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_db.Categories.ToList(),"Id","Category");
+            ViewData["CategoryId"] = new SelectList(_db.Categories.ToList(), "Id", "Category");
             ViewData["TagId"] = new SelectList(_db.ProductTags.ToList(), "Id", "Name");
             return View();
         }
         //POST Create method
         [HttpPost]
-        public async Task<IActionResult>Create(Products products,IFormFile image)
+        public async Task<IActionResult> Create(Products products, IFormFile image)
         {
             if (ModelState.IsValid)
             {
-                
+
                 if (image != null)
                 {
-                    var name = Path.Combine(_he.WebRootPath+"/images",Path.GetFileName(image.FileName));
+                    var name = Path.Combine(_he.WebRootPath + "/images", Path.GetFileName(image.FileName));
                     await image.CopyToAsync(new FileStream(name, FileMode.Create));
-                    products.Image = "Images/"+image.FileName;
+                    products.Image = "Images/" + image.FileName;
                 }
                 if (image == null)
                 {
