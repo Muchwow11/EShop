@@ -12,7 +12,7 @@ namespace EShop.Areas.Customer.Controllers
     [Area("Customer")]
     public class OrderController : Controller
     {
-        private ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
         public OrderController(ApplicationDbContext db)
         {
             _db = db;
